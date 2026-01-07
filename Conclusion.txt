@@ -28,7 +28,7 @@ Can use multiple features simultaneously
 What it used:
 OHLCV data
 Technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands, etc.)
-Sentiment score derived from news headlines
+Sentiment score derived from news headlines(simulated daily financial news sentiment using VADER, aggregated it into a daily sentiment score, and stored it as a feature in the main dataset. This sentiment feature was used as input to the Transformer model to capture market emotion alongside technical indicators.)
 Architecture highlights:
 Time-series windowing (60 days)
 Multi-feature input
