@@ -1,0 +1,41 @@
+🔹 Project Title
+Stock Market Trend Predictor using Time Series Analysis and Transformer Models
+1️⃣ What problem we worked on
+We aimed to predict the next-day stock movement (Up / Down) using:
+Historical stock price & volume data
+Technical indicators
+Market sentiment from news headlines
+The goal was decision support, not exact price prediction.
+2️⃣ Models used in the project
+✅ Model 1: ARIMA (Baseline TSA Model)
+Why used:
+ARIMA is a classical Time Series Analysis (TSA) model
+Provides a baseline to compare deep learning models against
+Widely accepted in finance for trend modeling
+What it used:
+Only historical Close price
+Assumes linear relationships
+Performance:
+Accuracy ≈ 52–53%
+Struggles with market noise and non-linear patterns
+📌 Conclusion:
+ARIMA works as a reference model but is limited for complex financial data.
+✅ Model 2: Transformer (Deep Learning Model)
+Why used:
+Captures long-term temporal dependencies
+Handles non-linear patterns
+Can use multiple features simultaneously
+What it used:
+OHLCV data
+Technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands, etc.)
+Sentiment score derived from news headlines
+Architecture highlights:
+Time-series windowing (60 days)
+Multi-feature input
+Attention mechanism for temporal importance
+Performance:
+Accuracy ≈ 52–53%
+Better recall for upward market movement
+More stable than ARIMA in volatile periods
+📌 Conclusion:
+Transformer learned richer representations than TSA models, though limited by dataset size.
